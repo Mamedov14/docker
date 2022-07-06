@@ -6,7 +6,13 @@ Docker Image — сборка, всё что мы упаковали, готов
 
 Docker Контейнер — это работающие приложение, созданное на основе Docker Image.
 
-#### [Пример Dockerfile](https://github.com/Mamedov14/docker/blob/main/Dockerfile)
+#### Пример Dockerfile
+```java
+FROM openjdk:16-alpine3.13
+ADD src/Docker.java .
+RUN javac Docker.java
+CMD ["java", "Docker"]
+```
 
 ### ВСЕ КОМАНДЫ ЛУЧШЕ ПИСАТЬ С ИСПОЛЬЗОВАНИЕМ SUDO!!!
 
