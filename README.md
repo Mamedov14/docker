@@ -1,7 +1,9 @@
 # docker
 
 Docker — это средство упаковки, доставки и запуска приложения.
+
 Docker Image — сборка, всё что мы упаковали, готовое к запуску приложение.
+
 Docker Контейнер — это работающие приложение, созданное на основе Docker Image.
 
 #### [Пример Dockerfile](https://github.com/Mamedov14/docker/blob/main/Dockerfile)
