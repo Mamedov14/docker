@@ -19,7 +19,7 @@ CMD ["java", "Docker"]
 - docker images — посмотреть локальные образы
 - docker ps— посмотреть контейнеры, которые работают
 - docker ps -a — посмотреть контейнеры, которые имеют статус
-- docker build -t  <name-tag> .  - собрать образ проекта
+- docker build -t  < NameTag > .  - собрать образ проекта
 - docker run hello — запуск контейнера
 - docker rm < ID > || < Name > - удалить контейнер
 - docker rmi < ID > || < Name > - удалить образ
