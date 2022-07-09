@@ -1,6 +1,7 @@
 package mamedov.java.docker.controller;
 
 import lombok.RequiredArgsConstructor;
+import mamedov.java.docker.dto.StudentDto;
 import mamedov.java.docker.entity.Student;
 import mamedov.java.docker.service.StudentService;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class StudentController {
 
-    private StudentService studentService;
+    private final StudentService studentService;
 
     @GetMapping("/students")
     public List<Student> findAll() {
@@ -21,13 +22,13 @@ public class StudentController {
     }
 
     @GetMapping("/student/{id}")
-    public Optional<Student> findById(@PathVariable Long id) {
+    public Student findById(@PathVariable Long id) {
         return studentService.findById(id);
     }
 
     @PostMapping("/save")
-    public Student save(@RequestBody Student student) {
-        return studentService.save(student);
+    public Student save(@RequestBody StudentDto studentDto) {
+        return studentService.save(studentDto);
     }
 
     @DeleteMapping("/delete/{id}")
