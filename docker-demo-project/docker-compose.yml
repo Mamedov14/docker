@@ -15,3 +15,5 @@ services:
     container_name: 'java-app'
     ports:
       - "8080:8080"
+    links:
+      - 'postgres:database'
