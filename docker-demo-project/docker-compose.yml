@@ -8,6 +8,8 @@ services:
       - 'POSTGRES_USER=mamedov'
       - 'POSTGRES_PASSWORD=mamedov'
       - 'POSTGRES_DB=students'
+    volumes:
+      - /home/Documents/bd
 
 
   app:
